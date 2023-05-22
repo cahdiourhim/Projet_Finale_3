@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Email</title>
+</head>
+<body>
+
+
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+
+    <!-- START HEADER/BANNER -->
+
+    <tbody>
+    <tr>
+        <td align="center">
+            <table class="col-600" width="600" border="0" align="center" cellpadding="0" cellspacing="0">
+                <tbody>
+                <tr>
+                    <td align="center" valign="top"
+                        background="https://designmodo.com/demo/emailtemplate/images/header-background.jpg"
+                        bgcolor="#66809b" style="background-size:cover; background-position:top;height=" 400
+                    ""="">
+                    <table class="col-600" width="600" height="400" border="0" align="center" cellpadding="0"
+                           cellspacing="0">
+
+                        <tbody>
+                        <tr>
+                            <td height="40"></td>
+                        </tr>
+
+
+
+
+
+                        <tr>
+                            <td align="center"
+                                style="font-family: 'Raleway', sans-serif; font-size:37px; color:#ffffff; line-height:24px; font-weight: bold; letter-spacing: 7px;">
+                                E- <span
+                                    style="font-family: 'Raleway', sans-serif; font-size:37px; color:#ffffff; line-height:39px; font-weight: 300; letter-spacing: 7px;">AGORA</span>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td align="center"
+                                style="font-family: 'Lato', sans-serif; font-size:15px; color:#ffffff; line-height:24px; font-weight: 300;">
+                                Merci pour votre commande.
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td height="50"></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+
+
+    <!-- END HEADER/BANNER -->
+
+
+    <!-- START 3 BOX SHOWCASE -->
+
+    <tr>
+        <td align="center">
+            <table class="col-600" width="600" border="0" align="center" cellpadding="0" cellspacing="0"
+                   style="margin-left:20px; margin-right:20px; border-left: 1px solid #dbd9d9; border-right: 1px solid #dbd9d9;">
+                <tbody>
+                <tr>
+                    <td height="35"></td>
+                </tr>
+
+                <tr>
+                    <td align="center"
+                        style="font-family: 'Raleway', sans-serif; font-size:22px; font-weight: bold; color:#2a3a4b;">A
+                        Bonjour,
+                    </td>
+                </tr>
+
+                <tr>
+                    <td height="10"></td>
+                </tr>
+
+
+                <tr>
+                    <td align="center"
+                        style="font-family: 'Lato', sans-serif; font-size:14px; color:#757575; line-height:24px; font-weight: 300;">
+
+                        Nous vous remercions de votre commande. Nous vous tiendrons informé par e-mail lorsque les articles de votre commande auront été expédiés. Votre date de livraison estimée est indiquée ci-dessous. Vous pouvez suivre l’état de votre commande ou modifier celle-ci dans Vos commandes sur AGORA.
+                    </td>
+                </tr>
+
+                </tbody>
+            </table>
+        </td>
+    </tr>
+
+
+
+    <tr>
+        <td height="5"></td>
+    </tr>
+
+
+    <!-- END 3 BOX SHOWCASE -->
+
+
+    <!-- START AWESOME TITLE -->
+
+
+
+    <!-- END AWESOME TITLE -->
+
+
+    <!-- START WHAT WE DO -->
+
+    <tr>
+        <td align="center">
+            <table class="col-600" width="600" border="0" align="center" cellpadding="0" cellspacing="0"
+                   style="margin-left:20px; margin-right:20px;">
+
+
+                <tbody>
+                <tr>
+                    <td align="center">
+                        <table class="col-600" width="600" border="0" align="center" cellpadding="0" cellspacing="0"
+                               style=" border-left: 1px solid #dbd9d9; border-right: 1px solid #dbd9d9;">
+                            <tbody>
+                            <tr>
+                                <td height="50"></td>
+                            </tr>
+                            <tr>
+                                <td align="right">
+
+
+
+
+
+                                    <table  border="0" align="left" cellpadding="0" cellspacing="0"
+                                             >
+                                        <tbody>
+                                        <tr th:each="produit: ${produits}">
+                                            <td align="center">
+                                                <table class="insider"   border="0" align="center"
+                                                       cellpadding="0" cellspacing="0">
+
+
+                                                    <tbody>
+                                                    <tr align="left">
+                                                        <td align="center" style="line-height:0px;">
+                                                            <img alt="" th:src="${produit.image}" width="250"/>
+
+                                                        </td>
+                                                        <td style="font-family: 'Raleway', sans-serif; font-size:15px; color:#2a3b4c; line-height:30px; font-weight: bold;">
+                                                            <h5 >  Nom: <span  th:text="${produit.nom}"> </span></h5>
+                                                            <h5 >  Quantité: <span  th:text="${produit.quantite}"> </span></h5>
+
+                                                            <h5 >  Prix: <span  th:text="${produit.prix}"> </span></h5>
+
+
+                                                        </td>
+
+
+                                                    </tr>
+
+
+
+
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-family: 'Raleway', sans-serif; font-size:30px; color:#2a3b4c; line-height:30px; font-weight: bold;">
+                                                <h5 >  Totale : <span  th:text="${totale}"> </span></h5>
+
+
+
+                                            </td>
+
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+
+
+                <!-- END WHAT WE DO -->
+
+
+                <!-- START READY FOR NEW PROJECT -->
+
+                <tr>
+                    <td align="center">
+                        <table align="center" width="100%" border="0" cellspacing="0" cellpadding="0"
+                               style=" border-left: 1px solid #dbd9d9; border-right: 1px solid #dbd9d9;">
+                            <tbody>
+                            <tr>
+                                <td height="50"></td>
+                            </tr>
+                            <tr>
+
+
+                                <td align="center" bgcolor="#34495e">
+                                    <table class="col-600" width="600" border="0" align="center" cellpadding="0"
+                                           cellspacing="0">
+                                        <tbody>
+                                        <tr>
+                                            <td height="35"></td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td align="center"
+                                                style="font-family: 'Raleway', sans-serif; font-size:20px; color:#f1c40f; line-height:24px; font-weight: bold;">
+                                                Livraison
+
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td height="20"></td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td align="center"
+                                                style="font-family: 'Lato', sans-serif; font-size:14px; color:#fff; line-height: 1px; font-weight: 300;">
+                                                Nous vous contacterons par e-mail dès qu'une date de livraison estimée sera disponible.
+                                            </td>
+                                        </tr>
+
+
+
+
+
+                                        <tr>
+                                            <td height="40"></td>
+                                        </tr>
+
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+
+
+                <!-- END READY FOR NEW PROJECT -->
+
+
+                <!-- START PRICING TABLE -->
+
+
+
+
+                <!-- END PRICING TABLE -->
+
+
+                <!-- START FOOTER -->
+
+                <tr>
+                    <td align="center">
+                        <table align="center" width="100%" border="0" cellspacing="0" cellpadding="0"
+                               style=" border-left: 1px solid #dbd9d9; border-right: 1px solid #dbd9d9;">
+                            <tbody>
+                            <tr>
+                                <td height="50"></td>
+                            </tr>
+                            <tr>
+                                <td align="center" bgcolor="#34495e"
+                                    background="https://designmodo.com/demo/emailtemplate/images/footer.jpg"
+                                    height="185">
+                                    <table class="col-600" width="600" border="0" align="center" cellpadding="0"
+                                           cellspacing="0">
+                                        <tbody>
+                                        <tr>
+                                            <td height="25"></td>
+                                        </tr>
+
+
+
+
+                                        <tr>
+                                            <td height="25"></td>
+                                        </tr>
+
+
+                                        </tbody>
+                                    </table>
+                                    <table align="center" width="35%" border="0" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                        <tr>
+                                            <td align="center" width="30%" style="vertical-align: top;">
+                                                <a href="https://www.facebook.com/" target="_blank"> <img
+                                                        src="https://designmodo.com/demo/emailtemplate/images/icon-fb.png">
+                                                </a>
+                                            </td>
+
+                                            <td align="center" class="margin" width="30%" style="vertical-align: top;">
+                                                <a href="https://twitter.com/" target="_blank"> <img
+                                                        src="https://designmodo.com/demo/emailtemplate/images/icon-twitter.png">
+                                                </a>
+                                            </td>
+
+                                            <td align="center" width="30%" style="vertical-align: top;">
+                                                <a href="https://plus.google.com/" target="_blank">
+                                                    <img src="https://designmodo.com/demo/emailtemplate/images/icon-googleplus.png">
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+
+
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+
+    <!-- END FOOTER -->
+
+
+    </tbody>
+</table>
+
+
+</body>
+</html>
